@@ -1,0 +1,57 @@
+:root{
+  --champagne:#f7e7ce; --ivory:#fffaf2; --gold:#c9a24b; --gold-deep:#9a7424; --ink:#2b2118; --muted:#6f6455; --line:#ead9b8;
+  --bs-body-font-family:'Jost',system-ui,sans-serif; --bs-body-color:var(--ink); --bs-body-bg:var(--ivory);
+}
+body{font-family:'Jost',system-ui,sans-serif;font-weight:400;line-height:1.7;color:var(--ink);background:var(--ivory)}
+h1,h2,h3,h4,.navbar-brand{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;letter-spacing:.01em;color:var(--ink)}
+h1{font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.05}
+h2{font-size:clamp(2rem,4vw,2.8rem)}
+a{color:var(--gold-deep)}
+.text-muted-2{color:var(--muted)}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.6rem 1rem;z-index:2000}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+.navbar{background:rgba(255,250,242,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.navbar-brand{font-size:1.9rem;color:var(--gold-deep)!important}
+.nav-link{color:var(--ink)!important;font-weight:500;position:relative}
+.nav-link.active,.nav-link:hover{color:var(--gold-deep)!important}
+.nav-link.active::after{content:"";position:absolute;left:.5rem;right:.5rem;bottom:2px;height:2px;background:var(--gold)}
+
+.btn-gold{background:linear-gradient(135deg,#d9b866,#b8913a);color:#241a0c;border:0;font-weight:500;padding:.8rem 1.9rem;border-radius:50rem;transition:transform .2s,box-shadow .2s}
+.btn-gold:hover{color:#241a0c;transform:translateY(-2px);box-shadow:0 10px 24px -10px #9a7424}
+.btn-outline-gold{border:1px solid var(--gold);color:var(--gold-deep);padding:.8rem 1.9rem;border-radius:50rem;font-weight:500}
+.btn-outline-gold:hover{background:var(--gold);color:#241a0c}
+
+.hero{background:radial-gradient(circle at 85% 20%,rgba(201,162,75,.28),transparent 45%),linear-gradient(180deg,var(--champagne),var(--ivory));padding:5.5rem 0 5rem}
+.hero .lead{max-width:34rem;color:var(--muted);font-size:1.2rem}
+.page-hero{background:linear-gradient(180deg,var(--champagne),var(--ivory));padding:4rem 0 3rem;border-bottom:1px solid var(--line)}
+.page-hero p{max-width:40rem;color:var(--muted);font-size:1.15rem;margin:0}
+.eyebrow{color:var(--gold-deep);font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
+section{scroll-margin-top:90px}
+.section{padding:4.5rem 0}
+.section-alt{background:var(--champagne)}
+
+.ph{aspect-ratio:4/3;border-radius:1rem;display:flex;align-items:center;justify-content:center;font-size:3.2rem;color:var(--gold-deep);
+  background:linear-gradient(135deg,#fbf1dc,#ecd6a4);border:1px solid var(--line)}
+.ph.tall{aspect-ratio:4/5}
+.card-gold{background:#fff;border:1px solid var(--line);border-radius:1.1rem;height:100%;transition:box-shadow .25s,transform .25s}
+.card-gold:hover{box-shadow:0 18px 36px -22px rgba(154,116,36,.6);transform:translateY(-3px)}
+.icon-circle{width:3.2rem;height:3.2rem;border-radius:50%;background:var(--champagne);color:var(--gold-deep);display:inline-flex;align-items:center;justify-content:center;font-size:1.4rem}
+.divider{width:64px;height:2px;background:var(--gold);margin:1rem 0 1.5rem}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--gold);line-height:1}
+.price-note{font-size:.9rem;color:var(--muted)}
+.accordion-button:not(.collapsed){background:var(--champagne);color:var(--ink);box-shadow:none}
+.accordion-button:focus{box-shadow:0 0 0 .2rem rgba(201,162,75,.4)}
+.map-frame{border:0;width:100%;height:460px;border-radius:1rem}
+.form-control,.form-select{border-color:var(--line);padding:.75rem 1rem}
+.form-control:focus,.form-select:focus{border-color:var(--gold);box-shadow:0 0 0 .2rem rgba(201,162,75,.3)}
+
+.cta-band{background:linear-gradient(135deg,#d9b866,#b8913a);color:#241a0c;border-radius:1.5rem;padding:3.5rem 1.5rem;text-align:center}
+.cta-band h2{color:#241a0c}
+.cta-band .btn{background:#241a0c;color:#f7e7ce}
+footer{background:#241a0c;color:#d9cbb0;padding:4rem 0 2rem}
+footer h3{color:var(--champagne);font-size:1.4rem}
+footer a{color:#e8cf94;text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}

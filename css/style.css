@@ -33,7 +33,7 @@ section{scroll-margin-top:90px}
 .section-alt{background:var(--champagne)}
 
 .ph{aspect-ratio:4/3;border-radius:1rem;display:flex;align-items:center;justify-content:center;font-size:3.2rem;color:var(--gold-deep);
-  background:linear-gradient(135deg,#fbf1dc,#ecd6a4);border:1px solid var(--line)}
+  background-image: url('../images/banner-image.jpg');border:1px solid var(--line);background-size: cover;}
 .ph.tall{aspect-ratio:4/5}
 .card-gold{background:#fff;border:1px solid var(--line);border-radius:1.1rem;height:100%;transition:box-shadow .25s,transform .25s}
 .card-gold:hover{box-shadow:0 18px 36px -22px rgba(154,116,36,.6);transform:translateY(-3px)}
@@ -55,3 +55,20 @@ footer h3{color:var(--champagne);font-size:1.4rem}
 footer a{color:#e8cf94;text-decoration:none}
 footer a:hover{color:#fff;text-decoration:underline}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* ---------- Parallax scrolling backgrounds ----------
+   To use a real photo: <div class="parallax-bg has-img" style="--bg-img:url('images/your-photo.jpg')" data-parallax></div>  */
+.hero,.page-hero,.banner{position:relative;overflow:hidden;isolation:isolate}
+.parallax-bg{position:absolute;inset:-20% 0;z-index:-1;pointer-events:none;will-change:transform;
+  background-color:transparent;background-size:cover;background-position:center;
+  background-image:var(--bg-img,
+    radial-gradient(circle at 12% 28%,rgba(201,162,75,.30),transparent 170px),
+    radial-gradient(circle at 78% 18%,rgba(217,184,102,.32),transparent 220px),
+    radial-gradient(circle at 60% 72%,rgba(201,162,75,.22),transparent 190px),
+    radial-gradient(circle at 25% 85%,rgba(217,184,102,.26),transparent 150px))}
+.parallax-bg.has-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,250,242,.82),rgba(247,231,206,.88))}
+.banner{padding:7rem 0;color:#fff;text-align:center;background:#2b2013}
+.banner h2{color:#fff;max-width:22ch;margin:0 auto 1rem}
+.banner p{color:#ecdcb8;max-width:38rem;margin:0 auto 2rem;font-size:1.15rem}
+.banner .parallax-bg.has-img::after{background:rgba(36,26,12,.6)}
+@media (max-width:767px){.banner{padding:5rem 0}}
